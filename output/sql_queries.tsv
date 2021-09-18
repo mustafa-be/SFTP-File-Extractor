@@ -1,0 +1,63 @@
+
+drop table cdr_logs;
+CREATE TABLE cdr_logs(operator_id string,operator_name string,msisdn string,date_time timestamp,msisdn2 string,record_write_date timestamp,file_source string);
+
+drop table login_logs;
+CREATE TABLE login_logs(operator_id string,operator_name string, date_time timestamp,login_count int,record_write_date timestamp,file_source string);
+
+drop table business_action_logs;
+CREATE TABLE business_action_logs(operator_id string,operator_name string,    msisdn string,action_type string,`date` date,record_write_date timestamp,file_source string);
+
+drop table subscrib_integrate_logs;
+CREATE TABLE subscrib_integrate_logs(operator_id string, operator_name string,date_time timestamp,  action_type string,subscriber_ins_id string,    msisdn string,record_write_date timestamp,file_source string);
+
+drop table payment_logs;
+
+CREATE TABLE payment_logs(operator_id string,operator_name string,  phone_no string,business_name string,payment int,date_time timestamp,record_write_date timestamp,file_source string);
+
+
+
+drop table erp_payment;
+
+CREATE TABLE erp_payment(employee_number string,payee_name string,vendor_id string,vendor_code string,check_id string,vendor_name_alt string, vendor_type string,vendor_site_id string,vendor_site_code_alt string,void_date string,payment_status string,document_number string,remit_to_supplier_name string,doc_category_code string,payment_currency string,payment_date string,check_last_update_date timestamp,last_updated_by string,payment_no string,check_date string,payment_type string,bank_account_no string, paid_to string,amount string, gl_date string,accts_pay_code_combination_id string,schedule_amount string,invoice_num string,invoice_currency string,invoice_status string,pay_group string,payment_currency1 string,voucher_number string,description1 string,vendor_site_code string,payment_method string,process_type string,bank_account_number string,bank_name string,bank_number string,branch_name string,org_id string,payment_date1 string,bank_account_type string,bank_id string,int_bank_account_type string,int_bank_account_num string,created_by string,payment_amount string,payment_number string,payment_due_date timestamp,document_amount string,po_number string,update_by string,creation_date string,description string,record_write_date timestamp,file_source string);
+
+drop table erp_invoice;
+
+CREATE TABLE erp_invoice(invoice_num string,invoice_id string,ref_po_num string,vendor_id string,description string,supplier_code string,invoice_type string,invoice_source string,currency1 string,invoice_amount string,approval_status string,approval_action string,creation_date timestamp,created_by string,modified_date timestamp ,modified_by string,delivered_to string,approved_by string,remarks string,action_date timestamp,partial_payment_flag string,full_payment_flag string,payee_name string,payment_for_quantity_of_goods string,deductions string,deduction_reason string,record_write_date string,file_source string);
+
+drop table mbb_master_child_mapping;
+
+CREATE TABLE mbb_master_child_mapping(master_sim_number string,child_sim_number string,create_date date,tariff_name string,sim_type string,record_write_date timestamp,file_source string);
+
+drop table erp_supplier;
+CREATE TABLE erp_supplier(supplier_name string,supplier_number string,last_update_date timestamp,re_assement_status string,sourc_module string,source string,registry_id string,tier string,last_po_issued_on string,ou_name string,update_by string,tax_reference string,party_site_id string,created_by string,updated_by string,legal_business_name string,ship_to_location string,bill_to_location string,legal_entity string,vendor_site_id string,site_code string,address_line1 string,address_line2 string,address_line3 string,city string,state string,county string,contact_type string,email_address string,phone_number string,zip string,country string,address_style string,creation_date string,inactive_date timestamp,end_date_active timestamp,org_id string,operating_unit string,party_id string,purpose1 string,purpose2 string,purpose3 string,tax_registartion_number string,vendor_type string,vendor_site_code string,duns_number string,payee_bank_account_identifier string,bank_name string,branch_name string,account_country_code string,account_name string,account_number string,account_currency_code string,allow_international_payments string,account_start_date string,account_end_date string,iban string,check_digits string,account_alternate_name string,bank_account_type string,account_suffix string,description string,agency_location_code string,record_write_date timestamp,file_source string);
+
+drop table call_info_data;
+CREATE TABLE call_info_data(serialno string,contactid string,contactchannelname string,contactmodename string,languagetypename string,callskilldesc string,callerno string,calledno string,subsnumber string,mediatypename string,callstarttime string,callduration string,staffid string,staffname string,custlevel string,custname string,custphone1 string,linkmode string,linkman string,linkaddress string,qcflag string,evterid string,staffhangup string,calltrack string,isprocessed string,record_write_date timestamp,file_source string);
+
+drop table call_evaluation_data;
+
+create table call_evaluation_data(playing_staff_id string,playing_time timestamp,playing_sn string,call_sn string,handing_staff_id string,recording_file string,playing_duration string,record_write_date timestamp,file_source string);
+drop table erp_po;
+create table erp_po(po_header_id string,po_number string,po_date string,template string,contract string,po_description string,po_type string,currency_code string,po_status string,cancelled_po string,po_classification string,supplier_name string,supplier_site string,ship_to string,bill_to string,line_num string,distribution_num string,item string,cancelled_line string,rate string,quantity_ordered string,line_amount string,quantity_billed string,quantity_delivered string,requisition_no string,requisition_description string,requisition_amount string,buyer_name string,charge_account string,natural_account_desc string,project_num string,closed_code string,created_by string,creation_date string,modified_by string,modified_date timestamp,approved_by string,remakrs string,record_write_date timestamp,file_source string);
+drop table complaints_data;
+CREATE TABLE complaints_data(serialno string,accepttime timestamp,servicefullname string,acceptphone string,username string,nodename string,accepterno string,status string,organame string,skillname string,servicetitle string,briefness string,replynotes string,replyflag string,dealdate string,handledate string,stayduration string,handlenotes string,templatecontent string,isovertat string,overtimehours string,handlehourlimit string,city string,reg string,handlingid string,complaintstate string,complainttype string,complaintchannel string,complaintlevel string,siteregion string,sitecity string,siteid string,calloutcome string,record_write_date timestamp,file_source string );
+
+drop table records_logging;
+create table records_logging(file_source string,file_record_count string,Record_load_Date date,loaded_record_counts string);
+"file_source","file_record_count","loaded_record_counts","Record_load_Date"
+
+
+
+
+id, hr_id, `bf-id`, name, backup_skills, batch, gender, current_grade, old_team_leader, team_leader, teleopti_team_name, team_coordinator, report_to, manager_operation, skill_set, manning_skill, dep, route_#, ob_groups, centre, Date, Value, status
+
+
+use etl;
+
+drop table cso_roster;
+
+create table cso_roster(id string , hr_id string , `bf-id` string , name string , backup_skills string , batch string , gender string , current_grade string , old_team_leader string , team_leader string , teleopti_team_name string , team_coordinator string , report_to string , manager_operation string , skill_set string , manning_skill string , dep string , `route_#` string , ob_groups string , centre string , duty_date date ,duty_time string,status string,emp_shift_details string, emp_shift_start_time string, emp_shift_end_time string);
+
+spark-submit --master yarn --deploy-mode client --class spark_learning spark_learning.jar
+

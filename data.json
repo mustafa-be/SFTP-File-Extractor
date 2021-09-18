@@ -1,0 +1,12 @@
+{
+    "host_1":{
+        "ip":"localhost",
+        "port":"2222",
+        "username":"root",
+        "password":"mustafa123",
+        "private_key":"./p.pem",
+        "input_path":"/root/test_sftp",
+        "output_path":"./output",
+        "output_backup_path":"./backup"
+    }
+}
