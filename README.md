@@ -1,11 +1,8 @@
 # SFTP File Extractor
 The script connects to a sftp server with credentials provided in data.json file and reads the input directory at sftp server and downloads it to a local directory and includes timestamp in the folder name.
 
-```mermaid
-graph TD;
-  A(Connect to SFTP using Credentials)-->B(Read Input Directory);
-  B-->C(Donwload to Local Directory);
-```
+![This is an image](image/sftp.png)
+
 
 ## Libraries
 pysftp 0.2.9
