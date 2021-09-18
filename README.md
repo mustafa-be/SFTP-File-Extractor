@@ -1,7 +1,7 @@
 # SFTP File Extractor
 The script connects to a sftp server with credentials provided in data.json file and reads the input directory at sftp server and downloads it to a local directory and includes timestamp in the folder name.
 
-![This is an image](image/sftp.png)
+![This is an image](images/sftp.png)
 
 
 ## Libraries
